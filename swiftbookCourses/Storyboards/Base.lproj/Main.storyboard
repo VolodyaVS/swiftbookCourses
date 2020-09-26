@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="qFd-5B-D1w">
+    <device id="retina4_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Main View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="MainViewController" customModule="swiftbookCourses" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oS8-80-7mm">
+                                <rect key="frame" x="100" y="258.5" width="120" height="51"/>
+                                <color key="backgroundColor" red="0.52763885389999998" green="0.74995915229999999" blue="0.98619419340000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="120" id="evC-Nh-GQQ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="32"/>
+                                <state key="normal" title="Fetch">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="fetchButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Y0S-ZQ-3RC"/>
+                                    <segue destination="OgI-Hv-6yh" kind="show" identifier="showCourses" id="BY6-48-sZV"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="oS8-80-7mm" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="39F-0h-hgU"/>
+                            <constraint firstItem="oS8-80-7mm" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="q9q-4H-iUM"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="0gp-s1-XwM"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="935.625" y="92.957746478873247"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Uie-bt-yei">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="qFd-5B-D1w" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Iw5-Ff-Um3">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="nfs-au-VQK"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6qP-iM-7tm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="138.75" y="92.957746478873247"/>
+        </scene>
+        <!--Courses View Controller-->
+        <scene sceneID="4j1-ae-9dn">
+            <objects>
+                <tableViewController id="OgI-Hv-6yh" customClass="CoursesViewController" customModule="swiftbookCourses" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="z3X-rF-aFm">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="100" id="EdV-8X-z4C" customClass="CourseCell" customModule="swiftbookCourses" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="320" height="100"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="EdV-8X-z4C" id="3Nc-mj-qwG">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="100"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="But-4B-hOt">
+                                            <rect key="frame" x="0.0" y="0.0" width="140" height="100"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="140" id="Veq-dE-Bes"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name of course" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HTg-pF-NQs">
+                                            <rect key="frame" x="148" y="0.0" width="157" height="41"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="41" id="XmN-2q-A6v"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="14"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lessons" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B4I-c2-ADv">
+                                            <rect key="frame" x="148" y="48.5" width="157" height="16"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="16" id="Jc8-y9-hEs"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tests" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ITZ-cd-asC">
+                                            <rect key="frame" x="148" y="72.5" width="157" height="16"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="16" id="RUQ-8W-Azj"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="ITZ-cd-asC" firstAttribute="leading" secondItem="But-4B-hOt" secondAttribute="trailing" constant="8" id="4G1-6g-gcF"/>
+                                        <constraint firstItem="But-4B-hOt" firstAttribute="leading" secondItem="3Nc-mj-qwG" secondAttribute="leading" id="GKr-V2-nNz"/>
+                                        <constraint firstItem="B4I-c2-ADv" firstAttribute="leading" secondItem="But-4B-hOt" secondAttribute="trailing" constant="8" id="Hzo-no-lbj"/>
+                                        <constraint firstAttribute="bottom" secondItem="But-4B-hOt" secondAttribute="bottom" id="OQa-84-GF6"/>
+                                        <constraint firstAttribute="trailing" secondItem="ITZ-cd-asC" secondAttribute="trailing" constant="15" id="QGt-qN-O7w"/>
+                                        <constraint firstAttribute="trailing" secondItem="HTg-pF-NQs" secondAttribute="trailing" constant="15" id="Rb8-ZB-1Ms"/>
+                                        <constraint firstItem="But-4B-hOt" firstAttribute="top" secondItem="3Nc-mj-qwG" secondAttribute="top" id="afh-XM-2m0"/>
+                                        <constraint firstItem="B4I-c2-ADv" firstAttribute="top" secondItem="HTg-pF-NQs" secondAttribute="bottom" constant="7.5" id="c2B-4I-a7E"/>
+                                        <constraint firstItem="HTg-pF-NQs" firstAttribute="top" secondItem="3Nc-mj-qwG" secondAttribute="top" id="cfV-Ju-WOg"/>
+                                        <constraint firstAttribute="trailing" secondItem="B4I-c2-ADv" secondAttribute="trailing" constant="15" id="fwz-Od-t9T"/>
+                                        <constraint firstItem="ITZ-cd-asC" firstAttribute="top" secondItem="B4I-c2-ADv" secondAttribute="bottom" constant="8" id="l1Q-7m-ndM"/>
+                                        <constraint firstItem="HTg-pF-NQs" firstAttribute="leading" secondItem="But-4B-hOt" secondAttribute="trailing" constant="8" id="yk3-QK-75L"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="courseImage" destination="But-4B-hOt" id="V4A-Do-ANa"/>
+                                    <outlet property="courseNameLabel" destination="HTg-pF-NQs" id="1mH-j6-veL"/>
+                                    <outlet property="numberOfLessons" destination="B4I-c2-ADv" id="RWB-4Z-IF3"/>
+                                    <outlet property="numberOfTests" destination="ITZ-cd-asC" id="gXW-0z-d8Z"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="OgI-Hv-6yh" id="Uxv-d0-Pyy"/>
+                            <outlet property="delegate" destination="OgI-Hv-6yh" id="e37-1U-sxb"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="v9E-wY-5X9"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DYA-uw-Kge" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1727" y="93"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

@@ -9,21 +9,29 @@
 /* Begin PBXBuildFile section */
 		FF95F4BA251E0A50003FB6E5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF95F4B9251E0A50003FB6E5 /* AppDelegate.swift */; };
 		FF95F4BC251E0A50003FB6E5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF95F4BB251E0A50003FB6E5 /* SceneDelegate.swift */; };
-		FF95F4BE251E0A50003FB6E5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF95F4BD251E0A50003FB6E5 /* ViewController.swift */; };
+		FF95F4BE251E0A50003FB6E5 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF95F4BD251E0A50003FB6E5 /* MainViewController.swift */; };
 		FF95F4C1251E0A50003FB6E5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF95F4BF251E0A50003FB6E5 /* Main.storyboard */; };
 		FF95F4C3251E0A51003FB6E5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FF95F4C2251E0A51003FB6E5 /* Assets.xcassets */; };
 		FF95F4C6251E0A51003FB6E5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF95F4C4251E0A51003FB6E5 /* LaunchScreen.storyboard */; };
+		FF95F4D0251E0DCD003FB6E5 /* CoursesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF95F4CF251E0DCD003FB6E5 /* CoursesViewController.swift */; };
+		FF95F4D4251E0F1E003FB6E5 /* Course.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF95F4D3251E0F1E003FB6E5 /* Course.swift */; };
+		FF95F4D8251E1041003FB6E5 /* CourseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF95F4D7251E1041003FB6E5 /* CourseCell.swift */; };
+		FF95F4E3251E1C87003FB6E5 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF95F4E2251E1C87003FB6E5 /* NetworkManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		FF95F4B6251E0A50003FB6E5 /* swiftbookCourses.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = swiftbookCourses.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF95F4B9251E0A50003FB6E5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FF95F4BB251E0A50003FB6E5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		FF95F4BD251E0A50003FB6E5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		FF95F4BD251E0A50003FB6E5 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		FF95F4C0251E0A50003FB6E5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FF95F4C2251E0A51003FB6E5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FF95F4C5251E0A51003FB6E5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FF95F4C7251E0A51003FB6E5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FF95F4CF251E0DCD003FB6E5 /* CoursesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoursesViewController.swift; sourceTree = "<group>"; };
+		FF95F4D3251E0F1E003FB6E5 /* Course.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Course.swift; sourceTree = "<group>"; };
+		FF95F4D7251E1041003FB6E5 /* CourseCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseCell.swift; sourceTree = "<group>"; };
+		FF95F4E2251E1C87003FB6E5 /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,6 +45,59 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FF857683251FBEDF000C9741 /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				FF95F4B9251E0A50003FB6E5 /* AppDelegate.swift */,
+				FF95F4C7251E0A51003FB6E5 /* Info.plist */,
+				FF95F4BB251E0A50003FB6E5 /* SceneDelegate.swift */,
+			);
+			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		FF857686251FBF24000C9741 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				FF95F4D3251E0F1E003FB6E5 /* Course.swift */,
+				FF95F4D7251E1041003FB6E5 /* CourseCell.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		FF857688251FBF2E000C9741 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				FF95F4E2251E1C87003FB6E5 /* NetworkManager.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		FF85768A251FBF53000C9741 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				FF95F4BD251E0A50003FB6E5 /* MainViewController.swift */,
+				FF95F4CF251E0DCD003FB6E5 /* CoursesViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		FF85768C251FBF72000C9741 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				FF95F4C4251E0A51003FB6E5 /* LaunchScreen.storyboard */,
+				FF95F4BF251E0A50003FB6E5 /* Main.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		FF85768D251FBF84000C9741 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				FF95F4C2251E0A51003FB6E5 /* Assets.xcassets */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
 		FF95F4AD251E0A50003FB6E5 = {
 			isa = PBXGroup;
 			children = (
@@ -56,13 +117,12 @@
 		FF95F4B8251E0A50003FB6E5 /* swiftbookCourses */ = {
 			isa = PBXGroup;
 			children = (
-				FF95F4B9251E0A50003FB6E5 /* AppDelegate.swift */,
-				FF95F4BB251E0A50003FB6E5 /* SceneDelegate.swift */,
-				FF95F4BD251E0A50003FB6E5 /* ViewController.swift */,
-				FF95F4BF251E0A50003FB6E5 /* Main.storyboard */,
-				FF95F4C2251E0A51003FB6E5 /* Assets.xcassets */,
-				FF95F4C4251E0A51003FB6E5 /* LaunchScreen.storyboard */,
-				FF95F4C7251E0A51003FB6E5 /* Info.plist */,
+				FF857686251FBF24000C9741 /* Models */,
+				FF85768A251FBF53000C9741 /* ViewControllers */,
+				FF85768C251FBF72000C9741 /* Storyboards */,
+				FF857683251FBEDF000C9741 /* SupportingFiles */,
+				FF857688251FBF2E000C9741 /* Networking */,
+				FF85768D251FBF84000C9741 /* Sources */,
 			);
 			path = swiftbookCourses;
 			sourceTree = "<group>";
@@ -137,7 +197,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FF95F4BE251E0A50003FB6E5 /* ViewController.swift in Sources */,
+				FF95F4D8251E1041003FB6E5 /* CourseCell.swift in Sources */,
+				FF95F4D0251E0DCD003FB6E5 /* CoursesViewController.swift in Sources */,
+				FF95F4BE251E0A50003FB6E5 /* MainViewController.swift in Sources */,
+				FF95F4E3251E1C87003FB6E5 /* NetworkManager.swift in Sources */,
+				FF95F4D4251E0F1E003FB6E5 /* Course.swift in Sources */,
 				FF95F4BA251E0A50003FB6E5 /* AppDelegate.swift in Sources */,
 				FF95F4BC251E0A50003FB6E5 /* SceneDelegate.swift in Sources */,
 			);
@@ -287,7 +351,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = swiftbookCourses/Info.plist;
+				INFOPLIST_FILE = swiftbookCourses/SupportingFiles/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -305,7 +369,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = swiftbookCourses/Info.plist;
+				INFOPLIST_FILE = swiftbookCourses/SupportingFiles/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
