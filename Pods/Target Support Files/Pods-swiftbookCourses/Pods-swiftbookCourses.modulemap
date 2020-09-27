@@ -1,0 +1,6 @@
+framework module Pods_swiftbookCourses {
+  umbrella header "Pods-swiftbookCourses-umbrella.h"
+
+  export *
+  module * { export * }
+}
