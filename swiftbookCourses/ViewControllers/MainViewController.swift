@@ -9,7 +9,7 @@ import UIKit
 
 class MainViewController: UIViewController {
     
-    // MARK: - Override methods
+    // MARK: - Override Methods
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "showCourses" {
             let courseVC = segue.destination as! CoursesViewController
@@ -17,7 +17,7 @@ class MainViewController: UIViewController {
         }
     }
     
-    // MARK: -
+    // MARK: - IB Actions
     @IBAction func fetchButton(_ sender: UIButton) {
     }
     

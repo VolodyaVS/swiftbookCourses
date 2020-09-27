@@ -15,7 +15,7 @@ class CourseCell: UITableViewCell {
     @IBOutlet var numberOfLessons: UILabel!
     @IBOutlet var numberOfTests: UILabel!
     
-    // MARK: - Methods
+    // MARK: - Public Methods
     func configure(with course: Course) {
         courseNameLabel.text = course.name
         numberOfLessons.text = "Number of lessons: \(course.numberOfLessons ?? 0)"
